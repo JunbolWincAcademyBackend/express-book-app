@@ -17,7 +17,7 @@ const getBooks = (genre, available) => {
     // JSON.parse(available) converts the string to a boolean
     books = books.filter((book) => book.available === JSON.parse(available));
   }
-  // so what we are doing is book.available ( which transfrom into true if the book is available) === true (if the available property is true in the book, after been transformed into a boolean by using JSON.parse())?
+  // so what we are doing is book.available ( which transform into true if the book is available) === true (if the available property is true in the book, after been transformed into a boolean by using JSON.parse())?
 
   return books;
 };

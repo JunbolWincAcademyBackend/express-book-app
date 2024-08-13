@@ -50,17 +50,17 @@ booksRouter.get('/:id',(req, res) => {
 
 //-- using POST Method to add a new book to the database with a new id added:
 booksRouter.post('/', authMiddleware, async (req, res) => { // ✅ Make the handler async so you can use the promise from getAuthToken
-  //try {
+  try {
     const token = await getAuthToken(); // ✅ Request a new token
     console.log('Token received:', token); // ✅ Log the token (optional)
 
     const { title, author, isbn, pages, available, genre } = req.body; // req.body is the request object property that stores the JSON payload we expect the client to pass to this route.
     const newBook = createBook(title, author, isbn, pages, available, genre);
     res.status(201).json(newBook);
-  //} catch (error) {
-    //console.error(error);
-    //res.status(500).send('Something went wrong while creating new book!');
-  //}
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Something went wrong while creating new book!');
+  }
 });
 
 //-- using PUT Method to edit or change a book's title, author, etc:
