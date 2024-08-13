@@ -1,10 +1,10 @@
 //import recordData from '../../data/records.json'assert { type: 'json' };
-const recordData = require('../../data/records.json');
+const recordsData = require('../../data/records.json');
 
 // Function to get records based on genre and availability
 const getRecords = (artist, genre, available) => {
   // Start with all records from the JSON data
-  let records = recordData.records
+  let records = recordsData.records
 
    // If a genre is specified, filter records by the given genre
    if (artist) {

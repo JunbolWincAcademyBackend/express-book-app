@@ -1,8 +1,8 @@
 //import recordData from '../../data/records.json'assert { type: 'json' };
-const recordData = require('../../data/records.json');
+const recordsData = require('../../data/records.json');
 
 const updateRecordById = (id, title, artist, year, available, genre) => {
-  const record = recordData.records.find((record) => record.id === id);
+  const record = recordsData.records.find((record) => record.id === id);
 
   if (!record) {
     throw new Error(`record with id ${id} was not found!`);

@@ -1,11 +1,11 @@
 //import bookData from '../../data/books.json' //assert { type: 'json' };
-const bookData = require('../../data/books.json');
+const booksData = require('../../data/books.json');
 
 
 // Function to get books based on genre and availability
 const getBooks = (genre, available) => {
   // Start with all books from the JSON data
-  let books = bookData.books;
+  let books = booksData.books;
 
   // If a genre is specified, filter books by the given genre
   if (genre) {

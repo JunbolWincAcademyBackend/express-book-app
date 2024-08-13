@@ -1,8 +1,8 @@
 //import bookData from '../../data/books.json' assert { type: 'json' };
-const bookData = require('../../data/books.json');
+const booksData = require('../../data/books.json');
 
 const updateBookById = (id, title, author, isbn, pages, available, genre) => {
-  const book = bookData.books.find((book) => book.id === id);
+  const book = booksData.books.find((book) => book.id === id);
 
   if (!book) {
     throw new Error(`book with id ${id} was not found!`);
